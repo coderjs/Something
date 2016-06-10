@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="RestaurantFinder" name="keywords">
+    <title>Nature Find Interactive Map</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- libraries and frameworks -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoLTP9XLQelA1vKtlDxihIX_s6X8HxL7E&callback"></script>
+
+</head>
+
+<body>
+
+    <div id="layer1">
+
+        <table id="table2">
+            <tr>
+                <td>
+                    <div id="map_canvas"></div>
+                </td>
+                <td id="side_bar">
+                    <!--<ul class="sidebar-nav" data-bind="foreach: data">
+                        <li class="sidebar-brand" data-bind="text: name"></li>
+                    </ul>-->
+                </td>
+				<td>
+                    <ul data-bind="foreach: venueList">
+					<li><a href="#" data-bind="text: name "></a></li>
+						<!--<li data-bind="text: name"></li>->
+					</ul>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+	<div>
+	<ul class="sidebar-nav" data-bind="text: name">
+	</div>
+
+    <!--- app -->
+    <script src="js/appJSKO5A.js"></script>
+</body>
+</html>

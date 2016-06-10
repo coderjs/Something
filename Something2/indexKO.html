@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="wrapper">
+<!-- START BOOTSTRAP NAV -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">FourSquare Popular Venues</a>
+            </div>
+            <!-- Top Menu Items -->
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav form-inline">
+					<li>
+					<form class="navbar-form navbar-left">
+					  <div class="form-group">
+					  <a href="#menu-toggle" class="btn btn-danger" id="menu-toggle">Toggle Venues</a>
+						<div class="input-group">
+						  <div class="input-group-addon">Current City: </div>
+						  <input type="text" class="form-control"data-bind="value: city" />
+						</div>
+					  </div>
+					</form>
+					</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+<!-- END BOOTSTRAP NAV -->
+
+
+<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+			<ul class="sidebar-nav" data-bind="foreach: venueList">
+				<li class="sidebar-brand" data-bind="text: name"></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+                <div id="map"></div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- SCRIPTS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="js/appKO.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+</body>
+
+</html>
+
+<!--
+http://googlemaps.googlermania.com/google_maps_api_v3/en/map_example_sidebar.html
+http://econym.org.uk/gmap/example_map2.htm
+
+
+-->
